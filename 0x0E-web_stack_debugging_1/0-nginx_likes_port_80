@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script kills all 'nginx' processes changes the listen port to 80
+sudo pkill nginx
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx start
